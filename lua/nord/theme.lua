@@ -5,27 +5,27 @@ local theme = {}
 theme.loadSyntax = function ()
     -- Syntax highlight groups
   local syntax = {
-    Type =           { fg = nord.nord9_gui }, -- int, long, char, etc.
-    StorageClass =   { fg = nord.nord9_gui }, -- static, register, volatile, etc.
-    Structure =      { fg = nord.nord9_gui }, -- struct, union, enum, etc.
+    Type =           { fg = nord.nord15_gui }, -- int, long, char, etc.
+    StorageClass =   { fg = nord.nord15_gui }, -- static, register, volatile, etc.
+    Structure =      { fg = nord.nord15_gui }, -- struct, union, enum, etc.
     Constant =       { fg = nord.nord4_gui }, -- any constant
-    Character =      { fg = nord.nord14_gui }, -- any character constant: 'c', '\n'
-    Number =         { fg = nord.nord15_gui }, -- a number constant: 5
-    Boolean =        { fg = nord.nord9_gui }, -- a boolean constant: TRUE, false
-    Float =          { fg = nord.nord15_gui }, -- a floating point constant: 2.3e10
-    Statement =      { fg = nord.nord9_gui }, -- any statement
-    Label =          { fg = nord.nord9_gui }, -- case, default, etc.
-    Operator =       { fg = nord.nord9_gui }, -- sizeof", "+", "*", etc.
-    Exception =      { fg = nord.nord9_gui }, -- try, catch, throw
-    PreProc =        { fg = nord.nord9_gui }, -- generic Preprocessor
-    Include =        { fg = nord.nord9_gui }, -- preprocessor #include
-    Define =         { fg = nord.nord9_gui }, -- preprocessor #define
-    Macro =          { fg = nord.nord9_gui }, -- same as Define
-    Typedef =        { fg = nord.nord9_gui }, -- A typedef
+    Character =      { fg = nord.nord13_gui }, -- any character constant: 'c', '\n'
+    Number =         { fg = nord.nord13_gui }, -- a number constant: 5
+    Boolean =        { fg = nord.nord11_gui }, -- a boolean constant: TRUE, false
+    Float =          { fg = nord.nord11_gui }, -- a floating point constant: 2.3e10
+    Statement =      { fg = nord.nord15_gui }, -- any statement
+    Label =          { fg = nord.nord15_gui }, -- case, default, etc.
+    Operator =       { fg = nord.nord11_gui }, -- sizeof", "+", "*", etc.
+    Exception =      { fg = nord.nord15_gui }, -- try, catch, throw
+    PreProc =        { fg = nord.nord15_gui }, -- generic Preprocessor
+    Include =        { fg = nord.nord15_gui }, -- preprocessor #include
+    Define =         { fg = nord.nord15_gui }, -- preprocessor #define
+    Macro =          { fg = nord.nord15_gui }, -- same as Define
+    Typedef =        { fg = nord.nord15_gui }, -- A typedef
     PreCondit =      { fg = nord.nord13_gui }, -- preprocessor #if, #else, #endif, etc.
-    Special =        { fg = nord.nord4_gui }, -- any special symbol
+    Special =        { fg = nord.nord15_gui }, -- any special symbol
     SpecialChar =    { fg = nord.nord13_gui }, -- special character in a constant
-    Tag =            { fg = nord.nord4_gui }, -- you can use CTRL-] on this
+    Tag =            { fg = nord.nord9_gui }, -- you can use CTRL-] on this
     Delimiter =      { fg = nord.nord6_gui }, -- character that needs attention like , or .
     SpecialComment = { fg = nord.nord8_gui }, -- special things inside a comment
     Debug =          { fg = nord.nord11_gui }, -- debugging statements
@@ -35,39 +35,14 @@ theme.loadSyntax = function ()
     Todo =           { fg = nord.nord13_gui, bg = nord.none, style = 'bold,italic' }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     Conceal =        { fg = nord.none, bg = nord.nord0_gui },
 
-
-    htmlLink = { fg = nord.nord14_gui, style = "underline" },
-    htmlH1 =   { fg = nord.nord8_gui, style = "bold" },
-    htmlH2 =   { fg = nord.nord11_gui, style = "bold" },
-    htmlH3 =   { fg = nord.nord14_gui, style = "bold" },
-    htmlH4 =   { fg = nord.nord15_gui, style = "bold" },
-    htmlH5 =   { fg = nord.nord9_gui, style = "bold" },
-    markdownH1 = { fg = nord.nord8_gui, style = "bold" },
-    markdownH2 = { fg = nord.nord11_gui, style = "bold" },
-    markdownH3 = { fg = nord.nord14_gui, style = "bold" },
-    markdownH1Delimiter = { fg = nord.nord8_gui },
-    markdownH2Delimiter = { fg = nord.nord11_gui },
-    markdownH3Delimiter = { fg = nord.nord14_gui },
+		Conditional =		{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- italic if, then, else, endif, switch, etc.
+		Keyword =			{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- italic for, do, while, etc.
+		Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' }, -- italic any other keyword
+		Comment =		{ fg = nord.nord3_gui_bright, bg = nord.none, style = 'italic' }, -- italic comments
+		Function =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' }, -- italic funtion names
+		Identifier =		{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- any variable name
+    String = { fg = nord.nord13_gui, bg = nord.none, style= 'italic' }, -- any string
   }
-
-  	-- Italic comments
-	if vim.g.nord_italic == true then
-		syntax.Conditional =		{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic for, do, while, etc.
-		syntax.Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' } -- italic any other keyword
-		syntax.Comment =		{ fg = nord.nord3_gui_bright, bg = nord.none, style = 'italic' } -- italic comments
-		syntax.Function =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' } -- italic funtion names
-		syntax.Identifier =		{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' }; -- any variable name
-    syntax.String = { fg = nord.nord14_gui, bg = nord.none, style= 'italic' } -- any string
-	else
-		syntax.Comment =		{fg = nord.nord3_gui_bright} -- normal comments
-		syntax.Conditional =		{ fg = nord.nord9_gui } -- normal if, then, else, endif, switch, etc.
-		syntax.Keyword =			{ fg = nord.nord9_gui } -- normal for, do, while, etc.
-		syntax.Repeat =				{ fg = nord.nord9_gui } -- normal any other keyword
-		syntax.Function =		{ fg = nord.nord8_gui} -- normal function names
-		syntax.Identifier =		{ fg = nord.nord9_gui}; -- any variable name
-    syntax.String = { fg = nord.nord14_gui } -- any string
-	end
 
   return syntax
 
@@ -205,28 +180,28 @@ theme.loadTreeSitter = function ()
     TSString =            { fg = nord.nord14_gui },    -- For strings.
 
     TSAttribute =         { fg = nord.nord15_gui },    -- (unstable) TODO: docs
-    TSBoolean=            { fg = nord.nord9_gui },    -- For booleans.
-    TSConstBuiltin =      { fg = nord.nord7_gui },    -- For constant that are built in the language: `nil` in Lua.
-    TSConstMacro =        { fg = nord.nord7_gui },    -- For constants that are defined by macros: `NULL` in C.
+    TSBoolean=            { fg = nord.nord11_gui },    -- For booleans.
+    TSConstBuiltin =      { fg = nord.nord15_gui },    -- For constant that are built in the language: `nil` in Lua.
+    TSConstMacro =        { fg = nord.nord15_gui },    -- For constants that are defined by macros: `NULL` in C.
     TSError =             { fg = nord.nord11_gui },    -- For syntax/parser errors.
     TSException =         { fg = nord.nord15_gui },    -- For exception related keywords.
     TSField =             { fg = nord.nord4_gui }, -- For fields.
-    TSFuncMacro =         { fg = nord.nord7_gui },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+    TSFuncMacro =         { fg = nord.nord15_gui },    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     TSInclude =           { fg = nord.nord9_gui },    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSLabel =             { fg = nord.nord15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
     TSNamespace =         { fg = nord.nord4_gui},    -- For identifiers referring to modules and namespaces.
-    TSOperator =          { fg = nord.nord9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator =          { fg = nord.nord11_gui }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter =         { fg = nord.nord10_gui }, -- For parameters of a function.
     TSParameterReference= { fg = nord.nord10_gui },    -- For references to parameters of a function.
     TSProperty =          { fg = nord.nord10_gui }, -- Same as `TSField`.
     TSPunctDelimiter =    { fg = nord.nord8_gui }, -- For delimiters ie: `.`
     TSPunctBracket =      { fg = nord.nord8_gui }, -- For brackets and parens.
     TSPunctSpecial =      { fg = nord.nord8_gui }, -- For special punctutation that does not fall in the catagories before.
-    TSStringRegex =       { fg = nord.nord7_gui }, -- For regexes.
+    TSStringRegex =       { fg = nord.nord15_gui }, -- For regexes.
     TSStringEscape =      { fg = nord.nord15_gui }, -- For escape characters within a string.
     TSSymbol =            { fg = nord.nord15_gui },    -- For identifiers referring to symbols or atoms.
-    TSType =              { fg = nord.nord9_gui},    -- For types.
-    TSTypeBuiltin =       { fg = nord.nord9_gui},    -- For builtin types.
+    TSType =              { fg = nord.nord15_gui},    -- For types.
+    TSTypeBuiltin =       { fg = nord.nord15_gui},    -- For builtin types.
     TSTag =               { fg = nord.nord4_gui },    -- Tags like html tag names.
     TSTagDelimiter =      { fg = nord.nord15_gui },    -- Tag delimiter like `<` `>` `/`
     TSText =              { fg = nord.nord4_gui },    -- For strings considenord11_gui text in a markup language.
@@ -240,12 +215,12 @@ theme.loadTreeSitter = function ()
   }
 
   treesitter.TSComment=          { fg = nord.nord3_gui_bright }
-  treesitter.TSConditional =     { fg = nord.nord9_gui }   -- For keywords related to conditionnals.
-  treesitter.TSKeyword =         { fg = nord.nord9_gui } -- For keywords that don't fall in previous categories.
-  treesitter.TSRepeat =          { fg = nord.nord9_gui }    -- For keywords related to loops.
+  treesitter.TSConditional =     { fg = nord.nord15_gui }   -- For keywords related to conditionnals.
+  treesitter.TSKeyword =         { fg = nord.nord15_gui } -- For keywords that don't fall in previous categories.
+  treesitter.TSRepeat =          { fg = nord.nord15_gui }    -- For keywords related to loops.
   treesitter.TSKeywordFunction = { fg = nord.nord8_gui }
   treesitter.TSFunction =        { fg = nord.nord8_gui }    -- For fuction (calls and definitions).
-  treesitter.TSMethod =          { fg = nord.nord7_gui }    -- For method calls and definitions.
+  treesitter.TSMethod =          { fg = nord.nord15_gui }    -- For method calls and definitions.
   treesitter.TSFuncBuiltin =     { fg = nord.nord8_gui }
   treesitter.TSVariable =        { fg = nord.nord4_gui }-- Any variable name that does not have another highlight.
   treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
@@ -458,9 +433,6 @@ theme.loadPlugins = function()
     LightspeedUnlabeledMatch = { fg = nord.nord4_gui, bg = nord.nord1_gui },
     LightspeedOneCharMatch = { fg = nord.nord8_gui, style = "bold,reverse" },
     LightspeedUniqueChar = { style = "bold,underline" },
-    -- LightspeedPendingOpArea = { style = "strikethrough" },
-    -- LightspeedPendingChangeOpArea = { style = "strikethrough" },
-    -- LightspeedCursor = { fg = nord.nord7_gui, style = "underline,reverse" },
   }
   -- Options:
 
