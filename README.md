@@ -1,16 +1,15 @@
 
-# shaunsingh/nord.nvim 
+# miksa1987/nord.nvim 
 
-## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
-
-![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
+## Neovim theme based off of the shaunsingh's great nord.nvim
+...More like Mariana Nord for VS Code. I love that color scheme.
 
 ## Features
 
 Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
-+ Supported plugins:
++ Supported plugins, TBD:
     + [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
     + [LSP Diagnostics](https://neovim.io/doc/user/lsp.html)
     + [Lsp Saga](https://github.com/glepnir/lspsaga.nvim)
@@ -42,12 +41,12 @@ added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-trees
 Install via your favourite package manager:
 ```vim
 " If you are using Vim-Plug
-Plug 'shaunsingh/nord.nvim'
+Plug 'miksa1987/nord.nvim'
 ```
 
 ```lua
 -- If you are using Packer
-use 'shaunsingh/nord.nvim'
+use 'miksa1987/nord.nvim'
 ```
 
 ## 🌓 Usage
@@ -73,39 +72,4 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
-```
-
-## ⚙️ Configuration
-
-| Option                              | Default     | Description                                                                                                                                                     |
-| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nord_contrast                   | `false`      | Make sidebars and popup menus like nvim-tree and telescope have a different background                                                                                       |
-| nord_borders                    | `false`     | Enable the border between verticaly split windows visable
-| nord_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
-| nord_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
-| nord_enable_sidebar_background  | `false`     | Re-enables the backgrond of the sidebar if you disabled the background of everything
-| nord_italic                     | `true`      | enables/disables italics
- 
-
-```lua
--- Example config in lua
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_disable_background = false
-vim.g.nord_italic = false
-
--- Load the colorscheme
-require('nord').set()
-```
-
-```vim
-" Example config in Vim-Script
-let g:nord_contrast = v:true
-let g:nord_borders = v:false
-let g:nord_disable_background = v:false
-let g:nord_italic = v:false
-
--- Load the colorscheme
-colorscheme nord
-```
 
