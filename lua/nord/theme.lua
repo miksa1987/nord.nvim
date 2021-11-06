@@ -70,7 +70,7 @@ theme.loadEditor = function ()
     IncSearch =        { fg = nord.nord6_gui, bg = nord.nord10_gui },
     LineNr =           { fg = nord.nord3_gui_bright },
     CursorLineNr =     { fg = nord.nord4_gui },
-    MatchParen =       { fg = nord.nord15_gui, bg = nord.none, style = 'bold' },
+    MatchParen =       { fg = nord.nord2_gui, bg = nord.nord13_gui, style = 'bold' },
     ModeMsg =          { fg = nord.nord4_gui },
     MoreMsg =          { fg = nord.nord4_gui },
     NonText =          { fg = nord.nord1_gui },
