@@ -4,6 +4,8 @@
 ## Neovim theme based off of the shaunsingh's great nord.nvim
 ...More like Mariana Nord for VS Code. I love that color scheme.
 
+![screenshot-js](https://i.ibb.co/2h80qNM/Screenshot-2021-11-09-at-21-58-39.png)
+
 ## Features
 
 Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features

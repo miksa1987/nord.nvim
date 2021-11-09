@@ -38,7 +38,7 @@ theme.loadSyntax = function ()
 		Conditional =		{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- italic if, then, else, endif, switch, etc.
 		Keyword =			{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- italic for, do, while, etc.
 		Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' }, -- italic any other keyword
-		Comment =		{ fg = nord.nord3_gui_bright, bg = nord.none, style = 'italic' }, -- italic comments
+		Comment =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' }, -- italic comments
 		Function =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' }, -- italic funtion names
 		Identifier =		{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- any variable name
     String = { fg = nord.nord13_gui, bg = nord.none, style= 'italic' }, -- any string
@@ -214,7 +214,7 @@ theme.loadTreeSitter = function ()
 
   }
 
-  treesitter.TSComment=          { fg = nord.nord3_gui_bright }
+  treesitter.TSComment=          { fg = nord.nord8_gui }
   treesitter.TSConditional =     { fg = nord.nord15_gui }   -- For keywords related to conditionnals.
   treesitter.TSKeyword =         { fg = nord.nord15_gui } -- For keywords that don't fall in previous categories.
   treesitter.TSRepeat =          { fg = nord.nord15_gui }    -- For keywords related to loops.

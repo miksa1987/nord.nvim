@@ -1,10 +1,10 @@
 local nord = {
   --16 colors
-  nord0_gui = "#343D47"        ,
-  nord1_gui = "#444D57"        ,
-  nord2_gui = "#545D67"        ,
-  nord3_gui = "#646D77"        ,
-  nord3_gui_bright = "#747D87" ,
+  nord0_gui = "#434C5E"        ,
+  nord1_gui = "#4C566A"        ,
+  nord2_gui = "#5C667A"        ,
+  nord3_gui = "#6C768A"        ,
+  nord3_gui_bright = "#7C869A" ,
   nord4_gui = "#D8DEE9"        ,
   nord5_gui = "#F7F7F7"        ,
   nord6_gui = "#FFFFFF"        ,
