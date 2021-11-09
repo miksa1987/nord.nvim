@@ -10,6 +10,7 @@ local nord = {
   nord6_gui = "#FFFFFF"        ,
   nord7_gui = "#5FBCBB"        ,
   nord8_gui = "#6699CC"        ,
+  nord8_gui_bright = "#9FA5ED" ,
   nord9_gui = "#5FB4B4"        ,
   nord10_gui = "#8ACFCF"       ,
   nord11_gui = "#EC5F66"       ,

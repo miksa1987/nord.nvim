@@ -39,7 +39,7 @@ theme.loadSyntax = function ()
 		Keyword =			{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- italic for, do, while, etc.
 		Repeat =				{ fg = nord.nord9_gui, bg = nord.none, style = 'italic' }, -- italic any other keyword
 		Comment =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' }, -- italic comments
-		Function =		{ fg = nord.nord8_gui, bg = nord.none, style = 'italic' }, -- italic funtion names
+		Function =		{ fg = nord.nord8_gui_bright, bg = nord.none, style = 'italic' }, -- italic funtion names
 		Identifier =		{ fg = nord.nord15_gui, bg = nord.none, style = 'italic' }, -- any variable name
     String = { fg = nord.nord13_gui, bg = nord.none, style= 'italic' }, -- any string
   }
@@ -218,10 +218,10 @@ theme.loadTreeSitter = function ()
   treesitter.TSConditional =     { fg = nord.nord15_gui }   -- For keywords related to conditionnals.
   treesitter.TSKeyword =         { fg = nord.nord15_gui } -- For keywords that don't fall in previous categories.
   treesitter.TSRepeat =          { fg = nord.nord15_gui }    -- For keywords related to loops.
-  treesitter.TSKeywordFunction = { fg = nord.nord8_gui }
-  treesitter.TSFunction =        { fg = nord.nord8_gui }    -- For fuction (calls and definitions).
+  treesitter.TSKeywordFunction = { fg = nord.nord8_gui_bright }
+  treesitter.TSFunction =        { fg = nord.nord8_gui_bright }    -- For fuction (calls and definitions).
   treesitter.TSMethod =          { fg = nord.nord15_gui }    -- For method calls and definitions.
-  treesitter.TSFuncBuiltin =     { fg = nord.nord8_gui }
+  treesitter.TSFuncBuiltin =     { fg = nord.nord8_gui_bright }
   treesitter.TSVariable =        { fg = nord.nord4_gui }-- Any variable name that does not have another highlight.
   treesitter.TSVariableBuiltin = { fg = nord.nord4_gui }
 

@@ -4,7 +4,7 @@
 ## Neovim theme based off of the shaunsingh's great nord.nvim
 ...More like Mariana Nord for VS Code. I love that color scheme.
 
-![screenshot-js](https://i.ibb.co/2h80qNM/Screenshot-2021-11-09-at-21-58-39.png)
+![screenshot-js](https://i.ibb.co/sqhGWmK/Screenshot-2021-11-09-at-22-09-33.png)
 
 ## Features
 
